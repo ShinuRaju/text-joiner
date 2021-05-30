@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <!-- https://cdnjs.com/libraries/twitter-bootstrap/5.0.0-beta1 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/css/bootstrap.min.css"
+    />
+
+    <!-- Icons: https://getbootstrap.com/docs/5.0/extend/icons/ -->
+    <!-- https://cdnjs.com/libraries/font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+
+    <style>
+        textarea{
+            height: 50vh;
+        }
+    </style>
+
+    <title>Hello, world!</title>
+  </head>
+  <body class="min-vw-100">
+
+    <h1 class="display-1 text-center my-4 ">Text Joiner</h1>
+    <p class=" w-75 text-center mx-auto mb-5">World's simplest browser-based utility for joining text. Load your text in the input form on the left and you'll automatically get merged text on the right. Powerful, free, and fast. Load text – get joined lines. </p>
+   
+    <div class="container-fluid h-75 px-4">
+        <div class="row h-100 mb-5">
+           <div class="col-md-6 mb-5">
+            <div class="form-group mb-4">
+                <label for="inputText"><h5>Input Text :</h5></label>
+                <textarea id="inputText" class="form-control h0100" name="inputText"  ></textarea>
+            </div>
+          <div class="btn btn-outline-primary" data-clipboard-target="#inputText">
+              Copy to clipboard
+          </div>
+           </div>
+           <div class="col-md-6">
+            <div class="form-group mb-4">
+                <label for="joinedText"><h5>Joined Text :</h5></label>
+                <textarea id="joinedText" class="form-control h0100" name="inputText"  ></textarea>
+            </div>
+            <div class="btn btn-outline-primary" data-clipboard-target = "#joinedText">
+                Copy to clipboard
+            </div>
+           </div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-md-5 offset-md-1 mb-4">
+                <label for="my-input"><h5>Symbol to connect the pieces :</h5></label>
+                <input id="symbol" class="form-control" type="text" name="" value=','>
+            </div>
+
+            <div class="col-md-5 mb-5">
+                <h5>Blank Lines and Trailing Spaces :</h5>
+               <div class="form-check">
+                   
+                 <input class="form-check-input" type="checkbox" value="blank" id="blankLines"  >
+                 <label class="form-check-label" for="blankLines">
+                Delete Blank Lines
+                 </label>
+               </div>
+               
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.bundle.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.4.0/clipboard.min.js"></script>
+    <script>
+        (function(){
+    new Clipboard('.btn');
+})();
+    </script>
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+
+    <!-- https://cdnjs.com/libraries/popper.js/2.5.4 -->
+    <!-- <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.4/umd/popper.min.js"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.min.js"
+    ></script> -->
+
+    <!-- More: https://getbootstrap.com/docs/5.0/getting-started/introduction/ -->
+        <script src="app.js"></script>
+</body>
+</html>
